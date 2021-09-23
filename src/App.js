@@ -1,11 +1,15 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './auth/Login';
-import Register from './auth/Register';
+import { BrowserRouter, Switch, Route, } from 'react-router-dom';
+import Home from './pages/Home/index.js';
+import Login from './pages/Login/index.js';
+import Register from './pages/Register/index.js';
+import NavigationBanner from './components/navigationBar/NavigationBanner.js';
+
+
 
 function App() {
   return (
     <BrowserRouter>
+    <NavigationBanner/>
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/login' component={Login} />
